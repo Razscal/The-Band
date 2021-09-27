@@ -1,0 +1,463 @@
+/*reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family:'Poppins',sans-serif;
+}
+
+/*
+1.Tu ngoai vao trong
+2. Tu tren xuong duoi
+3.Tu tong quan den chi tiet
+ */
+
+/* 1.Vi tri
+    2. kich thuoc
+    3.mau sac
+    4.kieu chu */
+#header {
+    position: fixed;
+    height: 90px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #000;
+    transition: 0.5 ease;
+}
+
+
+#header  img {
+    top: 13px;
+    width: 85px;
+    height: 65px;
+    position:absolute;
+    display: block;
+    left: 50%;
+    transform:translateX(-50%);
+    
+}
+
+.right-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+ .hamburger div {
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        display: flex;
+        left: 0;
+        flex-direction: column;
+        width:35%;
+        height: 85vh;
+        background-color: rgb(0, 0, 0);
+        overflow: hidden;
+        transform:translateX(-100%);
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        margin-top: 90px;
+        overflow-x: hidden;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 25px;
+        z-index: 1;
+        
+    }
+    .nav-active {
+        transform:translateX(0%) ;
+        opacity: 1;
+    }
+
+    .user-btn {
+        display: none;
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+     .burger-change .line3 {
+        transform: rotate(45deg) translate(-6px,-3px);
+        transition: 0.5s ease;
+    }
+     .burger-change  .line2 {
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+    .burger-change  .line1 {
+        transform: rotate(-45deg) translate(-6px,3px);
+        transition: 0.5s ease;
+    }
+
+    .hamburger div {
+        transition: 0.5s ease;
+    }
+    .user-btn {
+        display:none;
+    }
+    
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.5s ease;
+    
+}
+
+#nav,.subnav {
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+#nav > li > a {
+    color: #fff;
+}
+
+
+#nav li a {
+    font-weight: 200;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:  35px 24px;
+    top: 10%;
+    display: inline-block;
+}
+
+#nav .subnav {
+    font-weight: 300;
+    min-width: 190px;
+    display:none;
+    top: 96%;
+    left:0px;
+    position:absolute;
+    background-color: #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px; 
+}
+
+#nav>li>a::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height:1px;
+    width: 0;
+    left: 0;
+    bottom : 0px;
+    transform: scale(0,1);
+    transition: transform 500ms ease-in-out;
+}
+
+ #nav>li>a:hover::after {
+    width:100%;
+    transform:scaleX(0.8);
+    position: absolute;
+    bottom: 28px;
+    
+}
+
+#nav .subnav li:hover a,
+#nav>li:hover> a{
+    color:#fff;
+    width:100%;
+    transition: 0.2s ease-in-out;
+    transform:scale(1.1);
+}
+
+
+
+#nav .subnav a {
+    color: #000;
+    padding:0 12px ;
+    line-height: 38px;
+
+}
+ 
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .nav-arrow-down {
+    font-size: 10px;
+}
+
+#header .search-icon {
+    color:#fff;
+    font-size:24px;
+    display: inline-block;
+    line-height: 90px;
+    padding: 0 18px;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+
+
+#header .search-btn {
+    float: right;
+    cursor: pointer;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: 20px;
+}
+
+#header .btn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    COLOR: #fff;
+    border: none !important;
+    margin-top: 2px;
+}
+
+
+
+#header .shopping-btn {
+    float: right;
+    padding: 0 34px;
+    line-height: 90px;
+    position:relative;
+}
+
+#header .shopping-btn:hover {
+    transition: 0.5s;
+    position: relative;
+}
+
+#header .search-btn:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+#header .shopping-btn:hover .total {
+    
+    position:absolute;
+}
+
+#header .user-btn {
+
+    float: right;
+    cursor: pointer;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: 20px;
+}
+
+#header .user-btn:hover {
+    transform: scale(1.1);
+    transition:0.5s
+}
+
+#header .shopping-btn .total {
+    
+    font-weight: 800;
+    background-color: rgb(197, 44, 44);
+    padding:4px 6px;
+    color:rgb(7, 7, 7);
+    font-size: 12px;
+    right: 20px;
+    top:20%;
+    position: absolute;
+    border-radius: 100%;
+}
+
+.shopping-cart::before {
+    margin-top:34px;
+    content: "";
+    border-width: 15px 10px;
+    border-color: transparent transparent rgb(255, 255, 255) transparent;
+    border-style: solid;
+    position: absolute;
+    right: 2px;
+    top: -63px;
+}
+
+
+
+.shopping-cart{
+    cursor: default;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    top:75px;
+    position: absolute;
+    width: 515px;
+    right: 36px;
+    background-color: rgb(255, 248, 248);
+    z-index: 2;
+    box-shadow: 0  0 2px rgb(0, 0, 0);
+    border-radius:4px;
+    color: black;
+}
+
+.shopping-cart-active {
+    transform: translateY(0);
+    display: block;
+    opacity: 1;
+}
+
+.remove-btn {
+    cursor: pointer;
+}
+.shopping-btn {
+    position: relative;
+}
+
+
+
+.plan-card:hover .plan-date {
+    opacity: 0.3;
+    transition: 0.8s;
+
+}
+
+
+.plan-card:hover .plan-card-title {
+    opacity: 0.3;
+    transition: 0.8s;
+
+}
+
+.plan-card:hover .price {
+    opacity: 0.3;
+    transition: 0.8s;
+
+}
+
+.plan-card:hover .card-text{
+    color: #fff;
+    background-color: #000;
+    transition: 0.5s;
+
+}
+
+.table-cart {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.table-cart th,tr {
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.table-cart th input {
+    font-weight: 500;
+    width: 40px;
+    text-align: center;
+}
+
+.table-cart .remove-btn {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing:1px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(197, 44, 44);
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.calculate-price {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    letter-spacing:1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 0 ;
+    border-top: 1px solid rgb(204, 201, 201);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+.purchase-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.purchase-btn-active {
+    width:100%;
+    position: relative;
+    display: inline-block;
+    padding: 15px 0px 15px 0;
+    background-color:rgb(31, 28, 28);
+    color: white;
+    margin: 5px 0 0px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0,0.5);
+    border: none;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.purchase-btn-active:hover{
+    background-color:rgb(197, 44, 44);
+    transition: 0.3s ease;
+}
+
+.place-title {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .shopping-cart {
+        z-index: 1;
+        width:400px;
+        transform: translateX(25%);
+    }
+    .shopping-cart:before {
+        display: none;
+    }
+}
+@media screen and (max-width: 568px) {
+    .shopping-cart {
+        transform: translateX(35%);
+
+    }
+
+}
+

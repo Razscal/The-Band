@@ -1,0 +1,361 @@
+#buy-ticket-section {
+    overflow: hidden !important;
+    min-height: 1500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-ticket-header {
+    margin-top:46px;
+    background:#000;
+    color: #eee;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 40px;
+    padding:50px 0;
+}
+
+.buy-ticket-header h1 {
+    font-size:30px;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.year p{
+    font-size: 60px;
+    margin-top: 26px;
+    font-size: 30px;
+}
+
+.event-section {
+
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 120px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius:15px;
+}
+
+.event-left {
+    border-radius:15px 0 0 15px;
+    background-color: #000;
+    color: #fff;
+    padding: 53px 120px;
+    text-align: center;
+    height:100%;
+}
+
+.sold-out {
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: invert(1);
+}
+
+.event-right {
+    padding: 15px 40px;
+}
+
+.date {
+    font-size: 80px;
+    font-weight: 800;
+    padding:0;
+    min-width: 85px;
+}
+.month {
+    font-size: 16px;
+}
+
+.event-img {
+    display: flex;
+    font-size: 18px;
+    background-color: rgba(180, 159, 159, 0.5);
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    
+}
+
+
+.event-right .event-title {
+    text-transform : uppercase;
+    margin-bottom: 8px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+.event-desc {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 1100px) {
+    .event-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .event-left{
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px 0 0 8px;
+    }
+    .date {
+        font-size:24px
+    }
+}
+.plan-title {
+    padding: 100px 0 10px 0; 
+    text-transform: uppercase;
+    font-size:30px ;
+    letter-spacing:5px;
+    font-weight: 800;
+    margin: -30px 0 45px 0 ;
+    text-align: center;
+    outline: none;
+    border: none;
+    transition: 2s ease;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+.buy-ticket-header:hover {
+    box-shadow: inset 0px 0px 30px 2000px rgb(125,255,152);
+    color:black ;
+    transform: scale(1.02);
+    transition: 2s ease;
+}
+
+.plan-card-title {
+    padding: 0 15px;
+}
+
+.plan-card-block {
+    margin-top:130px;
+    overflow:hidden;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.or {
+    cursor: pointer;
+    padding: 15px 25px;
+    border: 2px solid rgb(211, 205, 205);
+    letter-spacing:2px;
+    font-size:20px;
+    font-weight: 300;
+    margin: 0 60px;
+}
+
+
+.plan-card {
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 200px 310px 80px;
+    grid-template-areas: "image" "text" "stats";
+    background:rgb(255, 255, 255);
+    box-shadow:0px 0px 2px rgb(0, 0, 0);
+}
+
+
+.card-text {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-text-2 {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 249, 249, 0.5);
+}
+
+.value,.type {
+    text-align: center;
+}
+.value {
+    padding-top: 8px;
+}
+.type {
+    font-size: 10px;
+}
+
+.card-image {
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/171/438/477/night-clouds-street-japan-track-hd-wallpaper-preview.jpg);
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-image-2 {
+    background-image: url(https://s1.1zoom.me/big3/303/Seoul_Houses_South_Korea_Megapolis_Night_584755_3840x2160.jpg);
+    background-size:cover;
+    border-radius:15px 15px 0 0;
+}
+.stat {
+    flex-basis: 33%;
+    min-height: 80px;
+    border-bottom:1px solid rgba(90, 86, 86,0.5);
+    
+}
+
+
+.stat:not(:first-child){
+    
+    border-left: 1px solid rgba(90, 86, 86,0.5);
+}
+
+
+.plan-date {
+    font-size: 35px;
+    font-weight: 800;
+    padding-top:10px;
+    padding-bottom:10px;
+    letter-spacing:2px
+}
+.card-stats {
+    background-color:#000000;
+    border-radius: 0 0 15px 15px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-stats-2 {
+    background-color: #000;
+    border-radius: 0 0 15px 15px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-text .price {
+    margin-top:20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Poppins';
+    letter-spacing:2px;
+    color: rgb(180, 26, 26);
+    width:60%;
+    style: italic;
+    padding: 6px 0;
+    border: 2px solid rgb(180, 26, 26);
+    transform: translateX(32.6%);
+}
+
+.plan .ticket-btn {
+    width:60%;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 20px 30px;
+    border: 1px solid rgb(236, 230, 230);
+    font-weight: bold;
+    background: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(190, 47, 47, 0.5)
+}
+
+.ticket-btn {
+ z-index: 1;
+ position: absolute;
+ left: 50%;
+transform: translateX(-50%);
+ opacity: 0;
+ bottom: 0;
+}
+
+.plan-card:hover .ticket-btn {
+    background:rgb(31, 29, 29);
+    z-index: 2;
+    transform: translateX(-50%);
+    bottom: 35%;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.ticket-btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 0px;
+    color: #fff;
+    left:50%;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    transition: 2s ease;
+}
+
+.ticket-btn:hover:after {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #255784;
+    background: rgb(190, 47, 47);
+    transition: 1s ease;
+}
+
+
+
+
+
+.btn-1 {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.value {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+    .card-block {
+        width: 100%;
+    }
+    .plan-card {
+        overflow: hidden;
+        margin-bottom: 60px;
+    }
+    .event-section{
+        margin: 30px 30px;
+    }
+    .or {
+        margin-bottom:60px;
+        flex-basis: 50%;
+        text-align: center;
+    }
+}
+@media screen and (max-width:400px) {
+    .plan-card {
+        margin-bottom: 60px;
+    }
+    .plan-card{
+        margin-bottom: 60px;
+    }
+    .event-section {
+        overflow:hidden;
+        margin: 30px 0;
+    }
+}
